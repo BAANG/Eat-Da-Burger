@@ -5,4 +5,4 @@ VALUES
     ("Max, the German Shepherd"),
     ("Mocha, the Border Collie"),
     ("Duke, the Alaskan Malamute"),
-    ("Gidget, the Taco Bell Dog")
+    ("Gidget, the Taco Bell Dog");

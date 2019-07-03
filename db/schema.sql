@@ -7,5 +7,5 @@ CREATE TABLE doggies (
     doggy_name VARCHAR(50) NOT NULL,
     isGoodBoy BOOLEAN NOT NULL DEFAULT true,
     PRIMARY KEY (id)
-)
+);
 
