@@ -17,3 +17,5 @@ var dog = {
         })
     }
 }
+
+module.exports = dog;
