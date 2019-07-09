@@ -1,11 +1,17 @@
 <li>
+	<b>
 	{{doggy_name}}
+	</b>
+	, the
+	<em>
+	{{doggy_type}}
+	</em>
 
-	<button class="change-status" data-id="{{id}}" data-newIsGood="{{isGood}}">
-		{{#if isGood}}Good boy!{{else}}Pet the Dog!{{/if}}
+	<button class="btn btn-sm btn-primary change-status" data-id="{{id}}" data-newIsGood="{{isGood}}">
+		{{#if isGood}}Pet the Dog!{{else}}Sit!{{/if}}
 	</button>
 
-	<button class="delete-dog" data-id="{{id}}" value="X">
+	<button class="btn btn-sm btn-danger delete-dog" data-id="{{id}}" value="X">
 		X
 	</button>
 </li>

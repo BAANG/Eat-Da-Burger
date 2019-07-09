@@ -15,9 +15,9 @@ router.get("/", function (req, res) {
 
 router.post("/api/dogs", function (req, res) {
     dog.create([
-        "doggy_name", "isGoodBoy"
+        "doggy_name", "doggy_type", "isGoodBoy"
     ], [
-            req.body.name, req.body.isGoodBoy
+            req.body.name, req.body.type, req.body.isGoodBoy
         ], function (result) {
             res.json({ id: result.insertID })
         })

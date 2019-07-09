@@ -26,6 +26,7 @@ $(".create-form").on("submit", function(event) {
 
     var newDog = {
         name: $("#dog").val().trim(),
+        type: $("#type").val().trim(),
         isGoodBoy: $("[name=isGoodBoy]:checked").val().trim()
     };
 

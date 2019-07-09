@@ -35,24 +35,27 @@
     </div>
 </div>
 
-<div class="col-12">
+<div class="col-12 text-center">
+    <hr>
     <h2>Add a Dog</h2>
-</div>
-<div class="col-12">
     <form class="create-form">
 
         <div class="form-group">
             <label for="dog">Dog Name:</label>
             <input type="text" id="dog" name="doggy_name">
         </div>
+        <div class="form-group">
+            <label for="type">Dog Type:</label>
+            <input type="text" id="type" name="doggy_type">
+        </div>
 
         <div class="form-group">
-            <label for="isGoodBoy">Is a good boy?</label><br>
+            <label for="isGoodBoy"><strong>Is a good boy?</strong></label><br>
             <input type="radio" name="isGoodBoy" value="1" checked>Is a good boy!
             <input type="radio" name="isGoodBoy" value="0">Not a good boy
         </div>
 
-        <button type="submit">Add Dog</button>
+        <button class="btn btn-lg btn-block btn-info" type="submit">Add Dog</button>
     </form>
 
 </div>

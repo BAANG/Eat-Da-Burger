@@ -1,8 +1,8 @@
-INSERT INTO doggies (doggy_name)
+INSERT INTO doggies (doggy_name, doggy_type)
 VALUES 
-    ("Kuma, the German Shepherd"),
-    ("Atlas, the Pit Bull"),
-    ("Max, the German Shepherd"),
-    ("Mocha, the Border Collie"),
-    ("Duke, the Alaskan Malamute"),
-    ("Gidget, the Taco Bell Dog");
+    ("Kuma", "German Shepherd"),
+    ("Atlas", "Pit Bull"),
+    ("Max", "German Shepherd"),
+    ("Mocha", "Border Collie"),
+    ("Duke","Alaskan Malamute"),
+    ("Gidget","Taco Bell Dog");
