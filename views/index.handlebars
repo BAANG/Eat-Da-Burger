@@ -5,7 +5,7 @@
 <ul>
     {{#each dogs}}
         {{#unless isGoodBoy}}
-            {{> dogs/dog-block isGood=false}}
+            {{> dogs/dog-block isGood=true}}
         {{/unless}}
     {{/each}}
 </ul>
@@ -15,7 +15,7 @@
 <ul>
     {{#each dogs}}
         {{#if isGoodBoy}}
-            {{> dogs/dog-block isGood=true}}
+            {{> dogs/dog-block isGood=false}}
         {{/if}}
     {{/each}}
 </ul>

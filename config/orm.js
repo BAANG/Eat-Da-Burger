@@ -68,7 +68,9 @@ var orm = {
         })
     },
     updateOne: function (table, col, condition, next) {
-        var queryString = "UPDATE" + table;
+        console.log("col obj to string:", col.toString())
+
+        var queryString = "UPDATE " + table;
         queryString += " SET ";
         queryString += objToSql(col);
         queryString += " WHERE ";
@@ -85,7 +87,12 @@ var orm = {
                 next(result);
             }
         )
+    },
 
+    deleteOne: function (table, id, next) {
+        var queryString = "DELETE FROM " + table;
+        queryString += " WHERE id = ";
+        
     }
 
 }
