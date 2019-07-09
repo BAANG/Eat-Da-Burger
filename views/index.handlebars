@@ -1,38 +1,58 @@
-<h1>Dogs!</h1>
+<div class="row">
+    <div class="col-12">
+        <div class="jumbotron text-center">
+            <blockquote class="blockquote">
+                <h3 class="mb-0">
+                    “Every dog has his day, unless he loses his tail, then he has a weak-end.”
+                </h3>
+                <footer class="blockquote-footer"><cite>June Carter Cash</cite></footer>
+            </blockquote>
+        </div>
+    </div>
+</div>
 
-<h2>Dogs that haven't been pet yet!</h2>
-
-<ul>
-    {{#each dogs}}
-        {{#unless isGoodBoy}}
+<div class="row">
+    <div class="col-6">
+        <h2>Dogs that haven't been pet yet!</h2>
+        <ul>
+            {{#each dogs}}
+            {{#unless isGoodBoy}}
             {{> dogs/dog-block isGood=true}}
-        {{/unless}}
-    {{/each}}
-</ul>
+            {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
 
-<h2>These dogs are goodbois!</h2>
-
-<ul>
-    {{#each dogs}}
-        {{#if isGoodBoy}}
+    <div class="col-6">
+        <h2>These dogs are goodbois!</h2>
+        <ul>
+            {{#each dogs}}
+            {{#if isGoodBoy}}
             {{> dogs/dog-block isGood=false}}
-        {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a Dog</h2>
-<form class="create-form">
-    
-    <div class="form-group">
-        <label for="dog">Dog Name:</label>
-        <input type="text" id="dog" name="doggy_name">
+            {{/if}}
+            {{/each}}
+        </ul>
     </div>
+</div>
 
-    <div class="form-group">
-        <label for="isGoodBoy">Is a good boy?</label><br>
-        <input type="radio" name="isGoodBoy" value="1" checked>Is a good boy!
-        <input type="radio" name="isGoodBoy" value="0">Not a good boy
-    </div>
+<div class="col-12">
+    <h2>Add a Dog</h2>
+</div>
+<div class="col-12">
+    <form class="create-form">
 
-    <button type="submit">Add Dog</button>
-</form>
+        <div class="form-group">
+            <label for="dog">Dog Name:</label>
+            <input type="text" id="dog" name="doggy_name">
+        </div>
+
+        <div class="form-group">
+            <label for="isGoodBoy">Is a good boy?</label><br>
+            <input type="radio" name="isGoodBoy" value="1" checked>Is a good boy!
+            <input type="radio" name="isGoodBoy" value="0">Not a good boy
+        </div>
+
+        <button type="submit">Add Dog</button>
+    </form>
+
+</div>
