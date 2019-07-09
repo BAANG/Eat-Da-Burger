@@ -1,17 +1,31 @@
 <li>
-	<b>
-	{{doggy_name}}
-	</b>
-	, the
-	<em>
-	{{doggy_type}}
-	</em>
+	<div class="row">
+		<span class="col-6">
+			<b class="h5">
+				{{doggy_name}}
+			</b>
+			<span class="font-italic">
+				, the
+				{{doggy_type}}
+			</span>
+		</span>
 
-	<button class="btn btn-sm btn-primary change-status" data-id="{{id}}" data-newIsGood="{{isGood}}">
-		{{#if isGood}}Pet the Dog!{{else}}Sit!{{/if}}
-	</button>
-
-	<button class="btn btn-sm btn-danger delete-dog" data-id="{{id}}" value="X">
-		X
-	</button>
+		<span class="col-6 text-right">
+			<button class="btn btn-sm delete-dog text-danger" data-id="{{id}}" value="X">
+				<h5>
+					<i class="material-icons">clear</i>
+				</h5>
+			</button>
+		</span>
+	</div>
+	<div>
+		<button class="btn btn-block btn-sm btn-primary change-status" data-id="{{id}}" data-newIsGood="{{isGood}}">
+			{{#if isGood}}
+			Pet the Dog!
+			{{else}}
+			Sit!
+			{{/if}}
+		</button>
+		<hr>
+	</div>
 </li>

@@ -1,11 +1,11 @@
 <div class="row">
     <div class="col-12">
-        <div class="jumbotron text-center">
+        <div class="jumbotron text-center bg-light" id="quote-header">
             <blockquote class="blockquote">
-                <h3 class="mb-0">
+                <h4 class="display-4">
                     “Every dog has his day, unless he loses his tail, then he has a weak-end.”
-                </h3>
-                <footer class="blockquote-footer"><cite>June Carter Cash</cite></footer>
+                </h4>
+                <footer class="blockquote-footer"><cite class="lead font-italic">June Carter Cash</cite></footer>
             </blockquote>
         </div>
     </div>
@@ -13,7 +13,10 @@
 
 <div class="row">
     <div class="col-6">
-        <h2>Dogs that haven't been pet yet!</h2>
+        <p class="h2 text-center">Good Bois 
+        <span class="lead">Pet these good bois!</span>
+        </p>
+        <hr>
         <ul>
             {{#each dogs}}
             {{#unless isGoodBoy}}
@@ -24,7 +27,10 @@
     </div>
 
     <div class="col-6">
-        <h2>These dogs are goodbois!</h2>
+        <p class="h2 text-center">Excited Bois 
+        <span class="lead">Tell these excited bois to sit!</span>
+        </p>
+        <hr>
         <ul>
             {{#each dogs}}
             {{#if isGoodBoy}}
@@ -34,10 +40,10 @@
         </ul>
     </div>
 </div>
-
 <div class="col-12 text-center">
-    <hr>
-    <h2>Add a Dog</h2>
+    <div class="jumbotron bg-light">
+    <h1 class="display-4">Add a Dog</h1>
+    <p class="lead">(Please, no cats...)</p>
     <form class="create-form">
 
         <div class="form-group">
@@ -54,8 +60,10 @@
             <input type="radio" name="isGoodBoy" value="1" checked>Is a good boy!
             <input type="radio" name="isGoodBoy" value="0">Not a good boy
         </div>
-
-        <button class="btn btn-lg btn-block btn-info" type="submit">Add Dog</button>
-    </form>
-
+    </div>
 </div>
+<div class="col-12">
+    <button id="bottom-button" class="btn btn-lg btn-block btn-primary" type="submit"><i class="material-icons">add</i> Add Dog</button>
+    <br>
+</div>
+</form>
