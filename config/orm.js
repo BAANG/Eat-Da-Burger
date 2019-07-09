@@ -92,7 +92,19 @@ var orm = {
     deleteOne: function (table, id, next) {
         var queryString = "DELETE FROM " + table;
         queryString += " WHERE id = ";
-        
+        queryString += id;
+
+        console.log(queryString);
+        connection.query(
+            queryString,
+            function(err, result) {
+                if (err) {
+                    throw err
+                }
+                next(result);
+            }
+        )
+
     }
 
 }

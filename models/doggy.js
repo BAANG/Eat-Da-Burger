@@ -15,6 +15,11 @@ var dog = {
         orm.updateOne("doggies", cols, condition, function(res) {
             next(res);
         })
+    },
+    delete: function(id, next) {
+        orm.deleteOne("doggies", id, function(res) {
+            next(res)
+        })
     }
 }
 

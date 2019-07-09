@@ -37,6 +37,19 @@ router.put("/api/dogs/:id", function (req, res) {
             res.status(200).end();
         }
     })
+});
+
+router.delete("/api/dogs/:id", function (req, res) {
+    var id = req.params.id;
+
+    dog.delete(id, function (result) {
+        if (result.affectedRows === 0) {
+            return res.status(404).end();
+        } else {
+            console.log("Delete request success.")
+            res.status(200).end()
+        }
+    })
 })
 
 module.exports = router;
